@@ -1,0 +1,284 @@
+/* Professional Experience Section Styles */
+.experience_area {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience_area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.experience_timeline {
+    position: relative;
+    margin-top: 60px;
+}
+
+.timeline_item {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    margin-left: 20px;
+}
+
+.timeline_item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -60px;
+    width: 2px;
+    background: linear-gradient(180deg, #8490ff 0%, #62bdfc 100%);
+}
+
+.timeline_item:last-child::before {
+    bottom: 0;
+}
+
+.timeline_dot {
+    position: absolute;
+    left: -9px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8490ff 0%, #62bdfc 100%);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px rgba(132, 144, 255, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.timeline_item:hover .timeline_dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 6px #fff, 0 0 0 12px rgba(132, 144, 255, 0.3);
+}
+
+.experience_card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #8490ff 0%, #62bdfc 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.experience_card:hover::before {
+    transform: scaleY(1);
+}
+
+.experience_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(132, 144, 255, 0.15);
+}
+
+.experience_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.experience_title {
+    flex: 1;
+    min-width: 200px;
+}
+
+.experience_title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 5px;
+    font-family: 'Heebo', sans-serif;
+    line-height: 1.3;
+}
+
+.experience_title h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8490ff;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.experience_title .location {
+    font-size: 14px;
+    color: #777777;
+    font-style: italic;
+}
+
+.experience_date {
+    background: linear-gradient(135deg, #8490ff 0%, #62bdfc 100%);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(132, 144, 255, 0.3);
+    font-family: 'Roboto', sans-serif;
+}
+
+.experience_content {
+    color: #555555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.experience_content p {
+    margin-bottom: 15px;
+}
+
+.experience_content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.experience_content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.experience_content ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #8490ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.experience_highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
+
+.highlight_tag {
+    background: linear-gradient(135deg, rgba(132, 144, 255, 0.1) 0%, rgba(98, 189, 252, 0.1) 100%);
+    color: #8490ff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(132, 144, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.highlight_tag:hover {
+    background: linear-gradient(135deg, #8490ff 0%, #62bdfc 100%);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(132, 144, 255, 0.3);
+}
+
+/* Company Logo or Icon */
+.company_logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #8490ff;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Current Role Highlight */
+.experience_card.current {
+    background: linear-gradient(135deg, rgba(132, 144, 255, 0.05) 0%, rgba(98, 189, 252, 0.05) 100%);
+    border: 2px solid rgba(132, 144, 255, 0.2);
+}
+
+.experience_card.current .experience_date {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.current_badge {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .timeline_item {
+        padding-left: 40px;
+        margin-left: 15px;
+    }
+
+    .experience_header {
+        flex-direction: column;
+    }
+
+    .experience_date {
+        margin-top: 10px;
+    }
+
+    .experience_title h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline_item {
+        padding-left: 30px;
+        margin-left: 10px;
+        padding-bottom: 40px;
+    }
+
+    .experience_card {
+        padding: 20px;
+    }
+
+    .experience_title h3 {
+        font-size: 18px;
+    }
+
+    .experience_title h4 {
+        font-size: 16px;
+    }
+
+    .experience_content {
+        font-size: 14px;
+    }
+}

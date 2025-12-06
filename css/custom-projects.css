@@ -54,7 +54,7 @@
 
 /* Hover effect */
 .projects_item:hover .projects_text {
-    background: linear-gradient(to top, rgba(132, 144, 255, 0.95) 0%, rgba(98, 189, 252, 0.85) 70%, transparent 100%);
+    background: linear-gradient(to top, rgba(74, 81, 135, 0.95) 0%, rgba(9, 20, 27, 0.85) 70%, transparent 100%);
 }
 
 .projects_item:hover .projects_text h4 {
@@ -84,7 +84,7 @@
 
 .projects_fillter .filter li a:hover {
     background: rgba(132, 144, 255, 0.1);
-    color: #000000;
+    color: #8490ff;
 }
 
 .projects_fillter .filter li.active a {
