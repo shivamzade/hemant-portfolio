@@ -19,9 +19,12 @@
 .projects_item img {
     width: 100%;
     height: 280px;
-    object-fit: contain;
+    object-fit: scale-down;
+    padding: 60px;
     display: block;
-    background-color: #f8f9fa;
+    background: radial-gradient(ellipse at center, #ffffff 0%, #e8f4f8 40%, #c5daef 100%);
+    border-radius: 8px;
+    /* box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 /* Improve text overlay with better background */
